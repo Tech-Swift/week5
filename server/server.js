@@ -19,10 +19,7 @@ const io = new Server(server, {
 require('./socket')(io);
 
 //Middlewares
-app.use(cors({
-  origin: "http://localhost:5173", // match your frontend
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 //Routes
